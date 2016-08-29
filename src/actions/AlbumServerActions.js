@@ -13,7 +13,7 @@ const AlbumServerActions = {
     console.log("Inside Image Server action")
     AppDispatcher.dispatch({
       type:'CREATE_ALBUM',
-      image
+      album
     })
   },
    deleteImage(data){

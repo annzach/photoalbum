@@ -11,7 +11,7 @@ class AlbumStore extends EventEmitter {
       switch (action.type) {
 
         case 'RECEIVE_ALBUMS':
-         _album = action.images;
+         _album = action.albums;
           this.emit('CHANGE');
           break;
 

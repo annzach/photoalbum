@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AlbumStore from '../stores/AlbumStore'
 import AlbumActions from '../actions/AlbumActions'
-
+import AlbumList from './AlbumList'
 
 
 export default class ViewAlbums extends Component{
@@ -32,11 +32,11 @@ export default class ViewAlbums extends Component{
 
 
   render(){
-/*   const imageLists = this.state.albums.map(image =>{
+const albumLists = this.state.albums.map(album =>{
       return (
-        <ImageList key = {image._id} {...image}/>
+        <AlbumList key = {album._id} {...album}/>
         )
-    })*/
+    })
     return(
     <table className="table">
       <thead>
@@ -46,7 +46,7 @@ export default class ViewAlbums extends Component{
         </tr>
       </thead>
       <tbody>
-      
+       {albumLists}
       </tbody>
       </table>
     )
