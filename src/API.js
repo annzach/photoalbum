@@ -48,7 +48,14 @@ getAllAlbums(){
          .then(AlbumServerActions.receiveAlbums)
          .catch(console.error);
 
-}
+},
+deleteAlbum(id){
+    axios.delete('/api/albums/'+id)
+         .then(res=>res.data)
+         //.then(ImageServerActions.deleteImage)
+         .catch(console.error);
+  },
+
 
 }
 

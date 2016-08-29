@@ -30,7 +30,7 @@ render(){
         
         <td>{name}</td>
         <td><button id = {_id} onClick={this.deleteAlbum} className ="btn btn-danger">Delete</button>
-            <button id = {_id} onClick={this.addToAlbum}className ="btn btn-success">AddToAlbum</button>
+            <button id = {_id} onClick={this.addToAlbum}className ="btn btn-success">Choose</button>
         </td>
       </tr>
       )

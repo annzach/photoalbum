@@ -25,7 +25,7 @@ export default class CreateAlbum extends Component {
     
    AlbumActions.createAlbums(album);
     this.setState({'album' : ''});
-  // browserHistory.push('/ViewImages');
+   browserHistory.push('/ViewAlbums');
   }
   render() {
     let {album} = this.state;
