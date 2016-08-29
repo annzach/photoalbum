@@ -20,6 +20,7 @@ export default class Main extends Component {
                 <li><Link to='/addImages'>Add Images</Link></li>
                 <li><Link to='/viewImages'>View Images</Link></li>
                 <li><Link to='/createAlbum'>Create Album</Link></li>
+                <li><Link to='/viewAlbums'>View Album</Link></li>
               </ul>
             </div>
           </div>

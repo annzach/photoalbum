@@ -1,5 +1,6 @@
 import axios from 'axios'
 import ImageServerActions from './actions/ImageServerActions'
+import AlbumServerActions from './actions/AlbumServerActions'
 
 const API ={
   getAllImages(){
@@ -40,8 +41,15 @@ deleteImage(id){
         //.then(ImageServerActions.createAlbum)
         .catch(console.error);
 },
+getAllAlbums(){
+     console.log("Inside API get all IMages")
+    axios.get('/api/albums')
+         .then(res=>res.data)
+         .then(AlbumServerActions.receiveAlbums)
+         .catch(console.error);
 
 }
 
+}
 
 export default API;
