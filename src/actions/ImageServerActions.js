@@ -1,10 +1,11 @@
 import AppDispatcher from '../AppDispatcher'
 
 const ImageServerActions = {
-  receiveBooks(books){
+  receiveImages(images){
+    console.log("Inside ImageServerActions" ,images)
     AppDispatcher.dispatch({
-      type:'RECEIVE_BOOKS',
-      books
+      type:'RECEIVE_IMAGES',
+      images
     })
   },
 
@@ -14,7 +15,13 @@ const ImageServerActions = {
       type:'CREATE_IMAGE',
       image
     })
-  }
+  },
+   deleteImage(data){
+  AppDispatcher.dispatch({
+    type:'DELETE_IMAGE',
+    data
+  })
+ },
 
 }
 export default ImageServerActions;

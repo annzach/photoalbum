@@ -10,6 +10,11 @@ const ImageActions = {
 
  lookup(author){
   API.lookup(author);
+ },
+
+ deleteImage(id){
+  API.deleteImage(id);
+  API.getAllImages();
  }
 
 }

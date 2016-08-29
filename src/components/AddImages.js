@@ -25,7 +25,7 @@ export default class AddImages extends Component {
     
    ImageActions.createImages(image);
     this.setState({'image' : ''});
-   //browserHistory.push('/searchpage');
+   browserHistory.push('/ViewImages');
   }
   render() {
     let {image} = this.state;

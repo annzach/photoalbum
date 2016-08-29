@@ -21,6 +21,10 @@ class ImageStore extends EventEmitter {
           console.log('image:',image)
           this.emit('CHANGE');
           break;
+
+        case 'DELETE_IMAGE':this.emit('CHANGE');
+                            break;
+
    
       }
     })
@@ -35,6 +39,8 @@ class ImageStore extends EventEmitter {
   }
 
   getAll() {
+    console.log("inside get all");
+    console.log(_image);
     return _image;
   }
 

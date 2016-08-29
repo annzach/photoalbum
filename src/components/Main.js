@@ -18,6 +18,7 @@ export default class Main extends Component {
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-right">
                 <li><Link to='/addImages'>Add Images</Link></li>
+                <li><Link to='/viewImages'>View Images</Link></li>
               </ul>
             </div>
           </div>
