@@ -32,6 +32,15 @@ deleteImage(id){
          .catch(console.error);
   },
 
+  createAlbums(album) {
+   console.log("Inside API create Albums")
+  axios.post('/api/albums',album)
+        .then(res=>res.data)
+        //.then(console.log(res))
+        //.then(ImageServerActions.createAlbum)
+        .catch(console.error);
+},
+
 }
 
 
