@@ -9,7 +9,7 @@ export default class ViewImages extends Component{
   constructor(){
     super();
     this.state = {
-      images:ImageStore.getAll()
+      status:ImageStore.getAll()
     }
     this._onChange = this._onChange.bind(this);
   }

@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'
 import AppDispatcher from '../AppDispatcher'
 
-let _image = [];
+let _image = [],_status;
 
 class ImageStore extends EventEmitter {
   constructor(){
@@ -42,6 +42,10 @@ class ImageStore extends EventEmitter {
     console.log("inside get all");
     console.log(_image);
     return _image;
+  }
+
+  getStatus(){
+    return _status;
   }
 
 

@@ -1,5 +1,6 @@
 import React , {Component} from 'react'
 import ImageActions from '../actions/ImageActions'
+import moment from 'moment'
 import { browserHistory } from 'react-router'
 
 
@@ -15,37 +16,22 @@ export default class ImageList extends Component {
    ImageActions.deleteImage(e.target.id)
   }
 
-  addToAlbum(e){
-    console.log('addOwner',e.target.id);
-    //browserHistory.push({pathname:'/ViewPerson', query:{petid:e.target.id}});
-  }
 
 
 render(){
   console.log("Inside Image List");
-  let {_id,imageurl, timestamp,albumkey}=this.props;
-  if(albumkey) {
-    return (
-      <tr key={_id}>
-        <td><img src={imageurl} width="200 px"  alt = "No Image"/></td>
-        <td>{timestamp}</td>
-            <td><button id = {_id} onClick={this.deleteImage} className ="btn btn-danger">Delete</button>
-            <button id = {_id} onClick={this.addToAlbum} className ="btn btn-success">AddToAlbum</button>
-        </td>
-      </tr>
-    )
-  }
-  else {
+  let {_id,name,url,createdAt,Key}=this.props;
+ 
+
       return (
       <tr key={_id}>
-        <td><img src={imageurl} width="200 px" alt = "No Image"/></td>
-        <td>{timestamp}</td>
-        <td><button id = {_id} onClick={this.deleteImage} className ="btn btn-danger">Delete</button>
-            <button id = {_id} onClick={this.addToAlbum}className ="btn btn-success">AddToAlbum</button>
-        </td>
+        <td>{name}</td>
+        <td><img src={url} width="250 px" alt = "No Image"/></td>
+        <td>{moment(createdAt).format('lll')}</td>
+        <td><button id = {Key} onClick={this.deleteImage} className ="btn btn-danger">Delete</button></td>
       </tr>
       )
-  }
+  
 }
 
 

@@ -16,6 +16,8 @@ const ImageServerActions = {
       image
     })
   },
+
+  
    deleteImage(data){
   AppDispatcher.dispatch({
     type:'DELETE_IMAGE',
